@@ -1,0 +1,27 @@
+
+
+entity Post {
+  title String required
+  content TextBlob required
+  date Instant required
+}
+
+entity Options {
+  optionName String required
+  optionValue String required
+  autoload String required
+}
+
+entity Tag {
+  name String required minlength(2)
+}
+
+relationship ManyToOne {
+  Post{user(login)} to User
+}
+
+relationship ManyToMany {
+  Post{tag(name)} to Tag{post}
+}
+
+paginate Post, Tag with infinite-scroll

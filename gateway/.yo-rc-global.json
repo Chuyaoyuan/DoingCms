@@ -1,0 +1,8 @@
+{
+  "generator-jhipster:7.0.1": {
+    "promptValues": {
+      "packageName": "io.yaoyuan.doingcms",
+      "nativeLanguage": "zh-cn"
+    }
+  }
+}
